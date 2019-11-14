@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User= require('../models/User');
+const User = require('../models/User');
 const secret = process.env.SECRET;
 
 router.post('/register', (req, res)=>{
@@ -102,5 +102,7 @@ router.post('/login', (req, res)=>{
     .catch()
 
 });
+
+
 
 module.exports = router;
